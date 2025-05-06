@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <div class="container">
+    <h1>Smart Timer</h1>
+    <label>Minutes: <input type="number" id="minutes" min="0" max="999"></label>
+    <label>Seconds: <input type="number" id="seconds" min="0" max="59"></label>
+    <select id="alertSound">
+      <option value="beep">Beep</option>
+      <option value="chime">Chime</option>
+    </select>
+    <br>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+
+    <div class="timer-display" id="timerDisplay">00:00</div>
+  </div>
+
+  <audio id="beep" src="beep.mp3"></audio>
+  <audio id="chime" src="chime.mp3"></audio>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
